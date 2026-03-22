@@ -1,222 +1,100 @@
-[gd_scene format=3 uid="uid://1s5pxctxigj6"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="Theme" uid="uid://fokx2du4r6xh" path="res://Graphics/Menu/MainMenu.tres" id="1_8lvcq"]
-[ext_resource type="Script" uid="uid://biirb7xleac5k" path="res://Graphics/Menu/Options.gd" id="2"]
-[ext_resource type="FontFile" uid="uid://bug6bdct05sxs" path="res://Graphics/Menu/ARIAL.TTF" id="3"]
-[ext_resource type="Texture2D" uid="uid://7803jgbep2ue" path="res://Graphics/backrooms/Oficina - copia.png" id="3_k6eyb"]
-[ext_resource type="PackedScene" uid="uid://42q6vd88na6l" path="res://fade_in/FadeIn.tscn" id="5"]
-[ext_resource type="PackedScene" uid="uid://dok3pjh1bn7q7" path="res://Graphics/Menu/UISound.tscn" id="6"]
+[ext_resource type="Script" path="res://Graphics/Menu/Options.gd" id="1"]
+[ext_resource type="Texture2D" path="res://Graphics/backrooms/Oficina - copia.png" id="2"]
 
-[sub_resource type="FontFile" id="1"]
-fallbacks = Array[Font]([ExtResource("3")])
-cache/0/variation_coordinates = {}
-cache/0/face_index = 0
-cache/0/embolden = 0.0
-cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
-cache/0/spacing_top = 0
-cache/0/spacing_bottom = 0
-cache/0/spacing_space = 0
-cache/0/spacing_glyph = 0
-cache/0/baseline_offset = 0.0
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/30/0 = Vector2(0, 0)
-cache/0/30/0/ascent = 0.0
-cache/0/30/0/descent = 0.0
-cache/0/30/0/underline_position = 0.0
-cache/0/30/0/underline_thickness = 0.0
-cache/0/30/0/scale = 1.0
-cache/0/30/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/30/0/kerning_overrides/30/0 = Vector2(0, 0)
-
-[sub_resource type="FontFile" id="2"]
-fallbacks = Array[Font]([ExtResource("3")])
-cache/0/variation_coordinates = {}
-cache/0/face_index = 0
-cache/0/embolden = 0.0
-cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
-cache/0/spacing_top = 0
-cache/0/spacing_bottom = 0
-cache/0/spacing_space = 0
-cache/0/spacing_glyph = 0
-cache/0/baseline_offset = 0.0
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/30/0 = Vector2(0, 0)
-cache/0/30/0/ascent = 0.0
-cache/0/30/0/descent = 0.0
-cache/0/30/0/underline_position = 0.0
-cache/0/30/0/underline_thickness = 0.0
-cache/0/30/0/scale = 1.0
-cache/0/30/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/30/0/kerning_overrides/30/0 = Vector2(0, 0)
-
-[sub_resource type="FontFile" id="3"]
-fallbacks = Array[Font]([ExtResource("3")])
-cache/0/variation_coordinates = {}
-cache/0/face_index = 0
-cache/0/embolden = 0.0
-cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
-cache/0/spacing_top = 0
-cache/0/spacing_bottom = 0
-cache/0/spacing_space = 0
-cache/0/spacing_glyph = 0
-cache/0/baseline_offset = 0.0
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/30/0 = Vector2(0, 0)
-cache/0/30/0/ascent = 0.0
-cache/0/30/0/descent = 0.0
-cache/0/30/0/underline_position = 0.0
-cache/0/30/0/underline_thickness = 0.0
-cache/0/30/0/scale = 1.0
-cache/0/30/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/30/0/kerning_overrides/30/0 = Vector2(0, 0)
-
-[sub_resource type="FontFile" id="FontFile_30wuu"]
-fallbacks = Array[Font]([ExtResource("3")])
-cache/0/variation_coordinates = {}
-cache/0/face_index = 0
-cache/0/embolden = 0.0
-cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
-cache/0/spacing_top = 0
-cache/0/spacing_bottom = 0
-cache/0/spacing_space = 0
-cache/0/spacing_glyph = 0
-cache/0/baseline_offset = 0.0
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/20/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/50/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/30/0 = Vector2(0, 0)
-cache/0/20/0/ascent = 0.0
-cache/0/20/0/descent = 0.0
-cache/0/20/0/underline_position = 0.0
-cache/0/20/0/underline_thickness = 0.0
-cache/0/20/0/scale = 1.0
-cache/0/20/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/20/0/kerning_overrides/20/0 = Vector2(0, 0)
-cache/0/20/0/kerning_overrides/50/0 = Vector2(0, 0)
-cache/0/20/0/kerning_overrides/30/0 = Vector2(0, 0)
-cache/0/50/0/ascent = 0.0
-cache/0/50/0/descent = 0.0
-cache/0/50/0/underline_position = 0.0
-cache/0/50/0/underline_thickness = 0.0
-cache/0/50/0/scale = 1.0
-cache/0/50/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/50/0/kerning_overrides/20/0 = Vector2(0, 0)
-cache/0/50/0/kerning_overrides/50/0 = Vector2(0, 0)
-cache/0/50/0/kerning_overrides/30/0 = Vector2(0, 0)
-cache/0/30/0/ascent = 0.0
-cache/0/30/0/descent = 0.0
-cache/0/30/0/underline_position = 0.0
-cache/0/30/0/underline_thickness = 0.0
-cache/0/30/0/scale = 1.0
-cache/0/30/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/30/0/kerning_overrides/20/0 = Vector2(0, 0)
-cache/0/30/0/kerning_overrides/50/0 = Vector2(0, 0)
-cache/0/30/0/kerning_overrides/30/0 = Vector2(0, 0)
-
-[node name="Options" type="Control" unique_id=210344466]
+[node name="Options" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_8lvcq")
-script = ExtResource("2")
+script = ExtResource("1")
 
-[node name="background" type="Sprite2D" parent="." unique_id=445338397]
-position = Vector2(961.75, 753.75)
-scale = Vector2(1.4069597, 1.9641461)
-texture = ExtResource("3_k6eyb")
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 6
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1165406487]
-layout_mode = 0
-offset_left = 301.0
-offset_top = 127.0
-offset_right = 1678.0
-offset_bottom = 927.0
-size_flags_horizontal = 0
-size_flags_vertical = 0
-alignment = 1
+[node name="Tint" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.03, 0.06, 0.58)
 
-[node name="Title" type="Label" parent="VBoxContainer" unique_id=868337587]
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="Center"]
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-text = "Options"
+custom_minimum_size = Vector2(700, 520)
+
+[node name="Margin" type="MarginContainer" parent="Center/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 26
+theme_override_constants/margin_top = 26
+theme_override_constants/margin_right = 26
+theme_override_constants/margin_bottom = 26
+
+[node name="VBox" type="VBoxContainer" parent="Center/Panel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Title" type="Label" parent="Center/Panel/Margin/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Opciones del prototipo"
 horizontal_alignment = 1
-uppercase = true
 
-[node name="Music Sound" type="Label" parent="VBoxContainer" unique_id=444944082]
+[node name="Info" type="Label" parent="Center/Panel/Margin/VBox"]
 layout_mode = 2
-theme_override_fonts/font = SubResource("1")
-text = "Music Volume"
-uppercase = true
+text = "Ajusta audio y pantalla para la demo."
+horizontal_alignment = 1
 
-[node name="Music_Slider" type="HSlider" parent="VBoxContainer" unique_id=1818827727]
+[node name="MusicLabel" type="Label" parent="Center/Panel/Margin/VBox"]
 layout_mode = 2
-size_flags_horizontal = 3
+text = "Volumen de música"
+
+[node name="MusicSlider" type="HSlider" parent="Center/Panel/Margin/VBox"]
+layout_mode = 2
 min_value = -30.0
 max_value = 0.0
+step = 1.0
 
-[node name="Game Sound" type="Label" parent="VBoxContainer" unique_id=1934759769]
+[node name="GameLabel" type="Label" parent="Center/Panel/Margin/VBox"]
 layout_mode = 2
-theme_override_fonts/font = SubResource("2")
-text = "Game volume"
-uppercase = true
+text = "Volumen de efectos / juego"
 
-[node name="Game_Slider" type="HSlider" parent="VBoxContainer" unique_id=641562949]
+[node name="GameSlider" type="HSlider" parent="Center/Panel/Margin/VBox"]
 layout_mode = 2
-size_flags_horizontal = 3
 min_value = -30.0
 max_value = 0.0
+step = 1.0
 
-[node name="FullScreen" type="Label" parent="VBoxContainer" unique_id=1032630311]
+[node name="FullscreenCheck" type="CheckBox" parent="Center/Panel/Margin/VBox"]
 layout_mode = 2
-size_flags_vertical = 1
-theme_override_fonts/font = SubResource("3")
-text = "Full Screen:"
-uppercase = true
+text = "Pantalla completa"
 
-[node name="CheckBox" type="CheckBox" parent="VBoxContainer/FullScreen" unique_id=284543530]
-layout_mode = 0
-offset_left = 250.0
-offset_top = 5.0
-offset_right = 274.0
-offset_bottom = 29.0
-
-[node name="BackButton" type="Button" parent="VBoxContainer" unique_id=955402736]
+[node name="BackButton" type="Button" parent="Center/Panel/Margin/VBox"]
 layout_mode = 2
-theme_override_fonts/font = SubResource("FontFile_30wuu")
-text = "BACK"
-flat = true
+text = "Volver"
 
-[node name="FadeIn" parent="." unique_id=741451179 instance=ExtResource("5")]
-visible = false
-layout_mode = 0
-
-[node name="UISound" parent="." unique_id=746378388 instance=ExtResource("6")]
-
-[connection signal="value_changed" from="VBoxContainer/Music_Slider" to="." method="_on_Music_Slider_value_changed"]
-[connection signal="value_changed" from="VBoxContainer/Game_Slider" to="." method="_on_Game_Slider_value_changed"]
-[connection signal="pressed" from="VBoxContainer/FullScreen/CheckBox" to="." method="_on_CheckBox_pressed"]
-[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
-[connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]
+[connection signal="value_changed" from="Center/Panel/Margin/VBox/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="Center/Panel/Margin/VBox/GameSlider" to="." method="_on_game_slider_value_changed"]
+[connection signal="toggled" from="Center/Panel/Margin/VBox/FullscreenCheck" to="." method="_on_fullscreen_check_toggled"]
+[connection signal="pressed" from="Center/Panel/Margin/VBox/BackButton" to="." method="_on_back_button_pressed"]

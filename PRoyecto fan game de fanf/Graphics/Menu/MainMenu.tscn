@@ -1,90 +1,108 @@
-[gd_scene format=3 uid="uid://b3u3ey1h4gwcw"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="Theme" uid="uid://fokx2du4r6xh" path="res://Graphics/Menu/MainMenu.tres" id="1_idegf"]
-[ext_resource type="Script" uid="uid://cuq01ja56aift" path="res://Graphics/Menu/MainMenu.gd" id="2_gnvcf"]
-[ext_resource type="Texture2D" uid="uid://dl7o4hmdo4lt0" path="res://Graphics/Menu/interfas v1..jpeg" id="3_pluvk"]
-[ext_resource type="Texture2D" uid="uid://clv74ixv6n06f" path="res://Graphics/Textura Letras/New Game.png" id="4_5yjhb"]
-[ext_resource type="Texture2D" uid="uid://dtrnl44n7olcy" path="res://Graphics/Textura Letras/83c52153e7792ad88e11debffb9886cd.webp" id="5_jl5e7"]
-[ext_resource type="PackedScene" uid="uid://42q6vd88na6l" path="res://fade_in/FadeIn.tscn" id="6_dn6px"]
-[ext_resource type="PackedScene" uid="uid://dok3pjh1bn7q7" path="res://Graphics/Menu/UISound.tscn" id="7_shcjs"]
+[ext_resource type="Script" path="res://Graphics/Menu/MainMenu.gd" id="1"]
+[ext_resource type="Texture2D" path="res://Graphics/Menu/interfas v1..jpeg" id="2"]
 
-[node name="Title Screen" type="Control" unique_id=1709434045]
+[node name="MainMenu" type="Control"]
 layout_mode = 3
-anchors_preset = 0
-theme = ExtResource("1_idegf")
-script = ExtResource("2_gnvcf")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
 
-[node name="background" type="Sprite2D" parent="." unique_id=261826105]
-position = Vector2(921.5871, 639.8215)
-scale = Vector2(1.7605855, 2.1017873)
-texture = ExtResource("3_pluvk")
-offset = Vector2(160, 80)
-
-[node name="Menu" type="VBoxContainer" parent="." unique_id=830873691]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 346.0
-offset_top = 681.0
-offset_right = 821.0
-offset_bottom = 982.0
 grow_horizontal = 2
 grow_vertical = 2
-alignment = 1
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 6
 
-[node name="CenterRow" type="HBoxContainer" parent="Menu" unique_id=947317233]
+[node name="Tint" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05, 0.02, 0.08, 0.55)
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="Center"]
 layout_mode = 2
-size_flags_horizontal = 2
-size_flags_vertical = 3
+custom_minimum_size = Vector2(780, 680)
 
-[node name="Buttons" type="VBoxContainer" parent="Menu/CenterRow" unique_id=570929059]
+[node name="Margin" type="MarginContainer" parent="Center/Panel"]
 layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 4
-theme_override_constants/separation = 20
-alignment = 1
+theme_override_constants/margin_left = 28
+theme_override_constants/margin_top = 28
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 28
 
-[node name="StartButton" type="Button" parent="Menu/CenterRow/Buttons" unique_id=1306466840]
+[node name="VBox" type="VBoxContainer" parent="Center/Panel/Margin"]
 layout_mode = 2
-size_flags_horizontal = 4
-icon = ExtResource("4_5yjhb")
-flat = true
+theme_override_constants/separation = 18
 
-[node name="OptionsButton" type="Button" parent="Menu/CenterRow/Buttons" unique_id=1308319266]
+[node name="Title" type="Label" parent="Center/Panel/Margin/VBox"]
 layout_mode = 2
-size_flags_horizontal = 4
-icon = ExtResource("5_jl5e7")
-flat = true
+theme_override_font_sizes/font_size = 40
+text = "FINAL FANTASY VI"
+horizontal_alignment = 1
 
-[node name="CreditsButton" type="Button" parent="Menu/CenterRow/Buttons" unique_id=779754227]
+[node name="Subtitle" type="Label" parent="Center/Panel/Margin/VBox"]
 layout_mode = 2
-text = "CREDITS"
-flat = true
+theme_override_font_sizes/font_size = 22
+text = "Ecos del Veldt · prototipo fangame construido sobre el proyecto original"
+horizontal_alignment = 1
+autowrap_mode = 3
 
-[node name="ExitButton" type="Button" parent="Menu/CenterRow/Buttons" unique_id=1775676950]
+[node name="Description" type="RichTextLabel" parent="Center/Panel/Margin/VBox"]
+custom_minimum_size = Vector2(0, 240)
 layout_mode = 2
-text = "EXIT"
-flat = true
+bbcode_enabled = true
+scroll_active = false
+text = "[center]Reimaginé el proyecto como una demo inspirada en FF6.\n\nIncluye una misión narrativa corta, exploración guiada y un combate por comandos ambientado en un teatro magitek improvisado usando los assets existentes del repositorio.[/center]"
 
-[node name="FadeIn" parent="." unique_id=1283081988 instance=ExtResource("6_dn6px")]
-visible = false
-layout_mode = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="Buttons" type="VBoxContainer" parent="Center/Panel/Margin/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 12
 
-[node name="UISound" parent="." unique_id=686072168 instance=ExtResource("7_shcjs")]
+[node name="StartButton" type="Button" parent="Center/Panel/Margin/VBox/Buttons"]
+layout_mode = 2
+text = "Iniciar prototipo"
 
-[node name="Label" type="Label" parent="." unique_id=856435901]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 1306.0
-offset_right = 384.0
-offset_bottom = 1341.0
-text = "Vercion 0.0.5 (You can do it)"
+[node name="OptionsButton" type="Button" parent="Center/Panel/Margin/VBox/Buttons"]
+layout_mode = 2
+text = "Opciones"
 
-[connection signal="pressed" from="Menu/CenterRow/Buttons/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="Menu/CenterRow/Buttons/OptionsButton" to="." method="_on_options_button_pressed"]
-[connection signal="pressed" from="Menu/CenterRow/Buttons/CreditsButton" to="." method="_on_credits_button_pressed"]
-[connection signal="pressed" from="Menu/CenterRow/Buttons/ExitButton" to="." method="_on_exit_button_pressed"]
-[connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]
+[node name="CreditsButton" type="Button" parent="Center/Panel/Margin/VBox/Buttons"]
+layout_mode = 2
+text = "Créditos"
+
+[node name="ExitButton" type="Button" parent="Center/Panel/Margin/VBox/Buttons"]
+layout_mode = 2
+text = "Salir"
+
+[node name="Footer" type="Label" parent="Center/Panel/Margin/VBox"]
+layout_mode = 2
+modulate = Color(0.8, 0.8, 0.9, 1)
+text = "Usa el menú para recorrer la demo y revisar el rediseño completo del proyecto."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[connection signal="pressed" from="Center/Panel/Margin/VBox/Buttons/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Center/Panel/Margin/VBox/Buttons/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="Center/Panel/Margin/VBox/Buttons/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="Center/Panel/Margin/VBox/Buttons/ExitButton" to="." method="_on_exit_button_pressed"]
